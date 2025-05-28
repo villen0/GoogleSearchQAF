@@ -16,16 +16,18 @@ public class Pages {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath= "//input[@class='gLFyf gsfi']")
-	WebElement search;
+
+	
+	@FindBy(xpath= "//textarea[@class='gLFyf']") WebElement search;
+	
+	@FindBy(xpath="(//input[@class='gNO89b'])[1]") WebElement searchbtn;
+	
 	
 	public void getSearch(String string) {
 		
 		search.sendKeys(string);
 	}
 	
-	@FindBy(xpath="(//input[@class='gNO89b'])[1]")
-	WebElement searchbtn;
 	
 	public void getSearchbtn() {
 		

@@ -7,6 +7,7 @@ import org.testng.Assert;
 import com.google.common.Base;
 import com.google.pages.Pages;
 
+import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -44,4 +45,13 @@ public class Steps extends Base {
 	    
 	    Assert.assertEquals(driver.getTitle(), driver.getTitle());
 	}
+	
+	@After
+	public void teardown() {
+		if (driver !=null) {
+			driver.quit();
+		}
+	}
+	
 }
+
